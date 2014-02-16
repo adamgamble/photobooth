@@ -3,3 +3,5 @@ development:
   encoding: unicode
   database: photobooth_development
   pool: 5
+  username: postgres
+  password: postgres
