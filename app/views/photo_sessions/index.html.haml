@@ -1,12 +1,22 @@
+:css
+  img {
+    width: 100px;
+    height: 50px;
+  }
 %table
   %thead
     %tr
       %th Created At
+      %th Pictures
+      %th Email
       %th Actions
   %tbody 
     - @photo_sessions.each do |photo_session|
       %tr
         %td=photo_session.created_at
+        %td
+          = image_tag photo_session.photo_1.url
+        %td= photo_session.email_address
         %td
           =link_to "Show", photo_session_path(photo_session)
           =link_to "Print", photo_session_print_path(photo_session)
