@@ -1,0 +1,12 @@
+%table
+  %thead
+    %tr
+      %th Created At
+      %th Actions
+  %tbody 
+    - @photo_sessions.each do |photo_session|
+      %tr
+        %td=photo_session.created_at
+        %td
+          =link_to "Show", photo_session_path(photo_session)
+          =link_to "Print", photo_session_print_path(photo_session)
