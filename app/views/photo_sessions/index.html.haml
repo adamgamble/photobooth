@@ -18,5 +18,6 @@
           = image_tag photo_session.photo_1.url
         %td= photo_session.email_address
         %td
-          =link_to "Show", photo_session_path(photo_session)
-          =link_to "Print", photo_session_print_path(photo_session)
+          =link_to "Show", photo_session_path(photo_session), class: "btn"
+          =link_to "Print", photo_session_print_path(photo_session), class: "btn"
+          =link_to "Delete", photo_session_path(photo_session),class: "btn", method: :delete
